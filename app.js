@@ -1,3 +1,20 @@
+document.getElementById('form-login').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+
+    // Aquí podrías validar el usuario y la contraseña
+    const usuario = document.getElementById('usuario').value;
+    const password = document.getElementById('password').value;
+
+    // Para este ejemplo, asumiremos que cualquier usuario y contraseña son correctos
+    if (usuario && password) {
+        // Ocultar sección de login
+        document.getElementById('login').style.display = 'none';
+        // Mostrar secciones de agregar producto e inventario
+        document.getElementById('agregar-producto').style.display = 'block';
+        document.getElementById('inventario').style.display = 'block';
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     let inventario = JSON.parse(localStorage.getItem('inventario')) || [];
 
