@@ -107,3 +107,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar la tabla de inventario al cargar la página
     actualizarInventario();
 });
+
+
